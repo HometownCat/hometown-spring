@@ -17,20 +17,28 @@ public class User {
 	@Column(name = "id", nullable = false)
 	private Long id;
 
+	@Column
 	private String username;
 
+	@Column
 	private String email;
 
+	@Column
 	private String password;
 
+	@Column
 	private String address;
 
+	@Column
 	private String phoneNumber;
 
+	@Column
 	private String profileImage;
 
+	@Column
 	private String userIp;
 
+	@Column
 	private Integer status;
 
 	@CreatedDate
