@@ -17,9 +17,12 @@ public class BoardComment {
 	@Column(name = "id")
 	private Long id;
 
+	@Column
 	private String comment;
 
+	@Column
 	private LocalDateTime createdAt;
 
+	@Column
 	private LocalDateTime updatedAt;
 }
