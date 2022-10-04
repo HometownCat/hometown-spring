@@ -15,23 +15,23 @@ import java.util.List;
 @Table(name = "board")
 public class Board {
 
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
 	private Long id;
 
-	@Column(name = "title", nullable = false)
+	@Column(name = "title", nullable = false, columnDefinition = "text default = null")
 	private String title;
 
-	@Column(name = "content", nullable = false)
+	@Column(name = "content", nullable = false, columnDefinition = "mediumtext default = null")
 	private String content;
 
-	@Column(name = "viewCount")
+	@Column(name = "viewCount", columnDefinition = "mediumint(8) UNSIGNED default = 0")
 	private Integer viewCount;
 
-	@Column(name = "likeCount")
+	@Column(name = "likeCount", columnDefinition = "int(10) UNSIGNED default = 0")
 	private Integer likeCount;
 
-	@Column(name = "commentCount")
+	@Column(name = "commentCount", columnDefinition = "smallint(5) UNSIGNED default = 0")
 	private Integer commentCount;
 
 	@CreatedDate
@@ -39,5 +39,6 @@ public class Board {
 
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
+
 
 }

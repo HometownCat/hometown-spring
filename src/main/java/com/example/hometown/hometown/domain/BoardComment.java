@@ -13,7 +13,7 @@ import java.util.List;
 @Table(name = "boardComment")
 public class BoardComment {
 
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Long id;
 

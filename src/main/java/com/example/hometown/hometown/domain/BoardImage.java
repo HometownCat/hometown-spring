@@ -18,40 +18,40 @@ public class BoardImage {
 	@Column(name = "id", nullable = false)
 	private Long id;
 
-	@Column
+	@Column(name = "image", columnDefinition = "text default = null")
 	private String image;
 
-	@Column
+	@Column(name = "jpeg", columnDefinition = "text default = null")
 	private String jpeg;
 
-	@Column
+	@Column(name = "webp", columnDefinition = "text default = null")
 	private String webp;
 
-	@Column
+	@Column(name = "original", columnDefinition = "text default = null")
 	private String original;
 
-	@Column
+	@Column(name = "jpegBucket", columnDefinition = "text default = null")
 	private String jpegBucket;
 
-	@Column
+	@Column(name = "webpBucket", columnDefinition = "text default = null")
 	private String webpBucket;
 
-	@Column
+	@Column(name = "originalBucket", columnDefinition = "text default = null")
 	private String originalBucket;
 
-	@Column
+	@Column(name = "width", columnDefinition = "mediumint(9) default = null")
 	private Integer width;
 
-	@Column
+	@Column(name = "height", columnDefinition = "mediumint(9) default = null")
 	private Integer height;
 
-	@Column
+	@Column(name = "filesizeJpeg", columnDefinition = "mediumint(9) default = null")
 	private Integer filesizeJpeg;
 
-	@Column
+	@Column(name = "filesizeWebp", columnDefinition = "mediumint(9) default = null")
 	private Integer filesizeWebp;
 
-	@Column
+	@Column(name = "order", columnDefinition = "tinyint(4) default = null")
 	private Integer order;
 
 	@CreatedDate

@@ -17,28 +17,28 @@ public class User {
 	@Column(name = "id", nullable = false)
 	private Long id;
 
-	@Column
+	@Column(name = "username", nullable = false, columnDefinition = "varchar(20) default = null")
 	private String username;
 
-	@Column
+	@Column(name = "email", nullable = false, columnDefinition = "mediumtext default = null")
 	private String email;
 
-	@Column
+	@Column(name = "password", nullable = false, columnDefinition = "varchar(20) default = null")
 	private String password;
 
-	@Column
+	@Column(name = "address", nullable = false, columnDefinition = "mediumtext default = null")
 	private String address;
 
-	@Column
+	@Column(name = "phoneNumber", nullable = false, columnDefinition = "varchar(15) default = null")
 	private String phoneNumber;
 
-	@Column
+	@Column(name = "profileImage", columnDefinition = "text default = null")
 	private String profileImage;
 
-	@Column
+	@Column(name = "userIp", columnDefinition = "varchar(15) default = null")
 	private String userIp;
 
-	@Column
+	@Column(name = "status", columnDefinition = "tinyint(4) default = 0")
 	private Integer status;
 
 	@CreatedDate
