@@ -52,6 +52,9 @@ public class User {
 	@OneToMany
 	private List<Board> boards = new ArrayList<>();
 
+	@OneToMany
+	private List<BoardLike> boardLikes = new ArrayList<>();
+
 	@OneToOne
 	private Auth auth;
 }
