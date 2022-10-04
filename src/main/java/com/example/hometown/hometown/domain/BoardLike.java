@@ -27,4 +27,8 @@ public class BoardLike {
 	@ManyToOne
 	@JoinColumn(name = "boardId", referencedColumnName = "id")
 	private Board board;
+
+	@ManyToOne
+	@JoinColumn(name = "userId", referencedColumnName = "id")
+	private User user;
 }
