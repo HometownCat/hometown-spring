@@ -60,4 +60,8 @@ public class BoardImage {
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
 
+	@ManyToOne
+	@JoinColumn(name = "boardId", referencedColumnName = "id")
+	private Board board;
+
 }

@@ -25,4 +25,8 @@ public class Auth {
 
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
+
+	@OneToOne
+	@JoinColumn(name = "userId", referencedColumnName = "id")
+	private User user;
 }

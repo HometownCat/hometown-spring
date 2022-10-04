@@ -25,4 +25,8 @@ public class BoardComment {
 
 	@Column
 	private LocalDateTime updatedAt;
+
+	@ManyToOne
+	@JoinColumn(name = "boardId", referencedColumnName = "id")
+	private Board board;
 }

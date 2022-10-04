@@ -40,5 +40,17 @@ public class Board {
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
 
+	@ManyToOne
+	@JoinColumn(name = "userId", referencedColumnName = "id")
+	private User user;
+
+	@OneToMany
+	private List<BoardComment> boardComments = new ArrayList<>();
+
+	@OneToMany
+	private List<BoardLike> boardLikes = new ArrayList<>();
+
+	@OneToMany
+	private List<BoardImage> boardImages = new ArrayList<>();
 
 }
