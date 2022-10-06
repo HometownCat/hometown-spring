@@ -1,5 +1,6 @@
 package com.example.hometown.hometown.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
@@ -12,12 +13,13 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
+//@AllArgsConstructor
 @Table(name = "user")
 public class User {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
-	private Long id;
+	private Integer id;
 
 	@Column(name = "username", nullable = false, columnDefinition = "varchar(20) default = null")
 	private String username;

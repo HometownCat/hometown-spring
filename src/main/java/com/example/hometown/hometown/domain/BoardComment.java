@@ -2,6 +2,8 @@ package com.example.hometown.hometown.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -15,15 +17,15 @@ public class BoardComment {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Long id;
+	private Integer id;
 
-	@Column
+	@Column(name = "comment", columnDefinition = "text default = null")
 	private String comment;
 
-	@Column
+	@CreatedDate
 	private LocalDateTime createdAt;
 
-	@Column
+	@LastModifiedDate
 	private LocalDateTime updatedAt;
 
 	@ManyToOne
