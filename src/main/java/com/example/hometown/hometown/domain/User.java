@@ -51,12 +51,12 @@ public class User {
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
 
-	@OneToMany
+	@OneToMany(mappedBy = "user")
 	private List<Board> boards = new ArrayList<>();
 
-	@OneToMany
+	@OneToMany(mappedBy = "user")
 	private List<BoardLike> boardLikes = new ArrayList<>();
 
-	@OneToOne
+	@OneToOne(mappedBy = "user")
 	private Auth auth;
 }

@@ -44,13 +44,13 @@ public class Board {
 	@JoinColumn(name = "userId", referencedColumnName = "id")
 	private User user;
 
-	@OneToMany
+	@OneToMany(mappedBy = "board")
 	private List<BoardComment> boardComments = new ArrayList<>();
 
-	@OneToMany
+	@OneToMany(mappedBy = "board")
 	private List<BoardLike> boardLikes = new ArrayList<>();
 
-	@OneToMany
+	@OneToMany(mappedBy = "board")
 	private List<BoardImage> boardImages = new ArrayList<>();
 
 }
