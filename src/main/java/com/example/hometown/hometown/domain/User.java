@@ -24,7 +24,7 @@ public class User {
 	@Column(name = "username", nullable = false, columnDefinition = "varchar(20) default = null")
 	private String username;
 
-	@Column(name = "email", nullable = false, columnDefinition = "mediumtext default = null")
+	@Column(name = "email", nullable = false, columnDefinition = "varchar(30) default = null", unique = true)
 	private String email;
 
 	@Column(name = "password", nullable = false, columnDefinition = "varchar(20) default = null")
