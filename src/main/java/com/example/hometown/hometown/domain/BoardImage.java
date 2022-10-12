@@ -16,7 +16,7 @@ public class BoardImage {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
-	private Integer id;
+	private Long id;
 
 	@Column(name = "image", columnDefinition = "text default = null")
 	private String image;
@@ -60,7 +60,7 @@ public class BoardImage {
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "boardId", referencedColumnName = "id")
 	private Board board;
 

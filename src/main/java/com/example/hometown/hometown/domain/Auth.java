@@ -16,7 +16,7 @@ public class Auth {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
-	private Integer id;
+	private Long id;
 
 	@Column(name = "accessToken", columnDefinition = "mediumtext default = null")
 	private String accessToken;

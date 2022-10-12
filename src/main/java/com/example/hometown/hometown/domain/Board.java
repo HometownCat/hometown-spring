@@ -17,7 +17,7 @@ public class Board {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
-	private Integer id;
+	private Long id;
 
 	@Column(name = "title", nullable = false, columnDefinition = "text default = null")
 	private String title;
@@ -40,7 +40,7 @@ public class Board {
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "userId", referencedColumnName = "id")
 	private User user;
 

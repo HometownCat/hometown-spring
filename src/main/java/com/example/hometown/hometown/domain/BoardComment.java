@@ -17,7 +17,7 @@ public class BoardComment {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Integer id;
+	private Long id;
 
 	@Column(name = "comment", columnDefinition = "text default = null")
 	private String comment;
@@ -28,7 +28,7 @@ public class BoardComment {
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "boardId", referencedColumnName = "id")
 	private Board board;
 }
