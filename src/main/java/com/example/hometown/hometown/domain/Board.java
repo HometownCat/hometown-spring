@@ -53,4 +53,7 @@ public class Board {
 	@OneToMany(mappedBy = "board")
 	private List<BoardImage> boardImages = new ArrayList<>();
 
+	@OneToMany(mappedBy = "board")
+	private List<BoardCategory> boardCategories = new ArrayList<>();
+
 }
