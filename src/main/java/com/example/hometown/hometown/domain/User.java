@@ -57,6 +57,6 @@ public class User {
 	@OneToMany(mappedBy = "user")
 	private List<BoardLike> boardLikes = new ArrayList<>();
 
-	@OneToOne(mappedBy = "user")
+	@OneToOne(mappedBy = "user", optional = false, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Auth auth;
 }

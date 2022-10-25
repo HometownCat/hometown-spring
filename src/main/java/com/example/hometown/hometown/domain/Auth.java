@@ -30,7 +30,8 @@ public class Auth {
 	@LastModifiedDate
 	private LocalDateTime updatedAt;
 
-	@OneToOne
+	@MapsId
+	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "userId", referencedColumnName = "id")
 	private User user;
 }

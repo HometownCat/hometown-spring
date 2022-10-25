@@ -44,16 +44,16 @@ public class Board {
 	@JoinColumn(name = "userId", referencedColumnName = "id")
 	private User user;
 
-	@OneToMany(mappedBy = "board")
+	@OneToMany(mappedBy = "board",cascade = CascadeType.ALL)
 	private List<BoardComment> boardComments = new ArrayList<>();
 
-	@OneToMany(mappedBy = "board")
+	@OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
 	private List<BoardLike> boardLikes = new ArrayList<>();
 
-	@OneToMany(mappedBy = "board")
+	@OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
 	private List<BoardImage> boardImages = new ArrayList<>();
 
-	@OneToMany(mappedBy = "board")
+	@OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
 	private List<BoardCategory> boardCategories = new ArrayList<>();
 
 }
